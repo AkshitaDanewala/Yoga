@@ -1,0 +1,918 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html, body{
+    height: 100vh;
+    width: 100%;
+    scroll-behavior: smooth;
+}
+
+
+nav{
+    height: 8vh;
+    width: 100%;
+/* background-color:seagreen; */
+background-color: white;
+display: flex;
+    align-items: center;
+    justify-content: center;
+    /* overflow: hidden;
+    position: fixed;
+top: 0; */
+}
+img{
+    height: 7vh;
+    width: 7vw;
+    mix-blend-mode: multiply;
+}
+ul{
+    display: flex;
+}
+ li{
+    list-style: none;
+    margin: 0 1vmax;
+    font-size: 1.4vmax;
+    font-family: Arial, Helvetica, sans-serif;
+ }
+ li a{
+    color: black;
+    text-decoration: none;
+ }
+
+
+ li a::after{
+    content: "";
+    display: block;
+    height: 0.2vmax;
+    width: 100%;
+    background-color:black;
+transform: scale(0);
+transform-origin: left;
+transition: transform  0.3s ease;
+ }
+ li a:hover::after{
+    transform: scale(1);
+ }
+ .pg1{
+    height: 100vh;
+    width: 100%;
+    background-color: black;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content:space-evenly;   
+}
+ .box{
+    height: 50vh;
+    width: 100%;
+    /* border: 2px solid white; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+/* margin: 5vmax auto; */
+ }
+ .box h1{
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 27vmax;
+    /* background-image: url(https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=920&q=80); */
+    background-image: url(https://media.istockphoto.com/id/1147474832/photo/an-active-young-woman-stands-on-shore-of-lake-at-sunrise.jpg?s=612x612&w=0&k=20&c=RAL8l_LcknSTOz6yj8FVZyhchF-4C2QA2M6nwHZxOD0=);
+    background-position: center;
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+ }
+ .box1{
+    height: 30vh;
+    width: 50%;
+    /* border: 2px solid white; */
+display: flex;
+flex-direction: column;
+align-items: center;
+justify-content: space-evenly;
+padding: 0 2vmax;
+ }
+ .box1 p{
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1.2vmax;
+    line-height: 1.6vmax;
+    text-align: center;
+ }
+button{
+    padding: 0.7vmax 1vmax;
+    font-size: 1.3vmax;
+    font-weight: bold;
+    font-family: Arial, Helvetica, sans-serif;
+    border: 2px solid white;
+    background-color: black;
+    border-radius: 1vmax;
+    transition: all ease 0.6s;
+    cursor: pointer;
+    color: white;
+}
+button:hover{
+box-shadow: 2px 2px 5px white;
+}
+/* -------------------------------------------------------- */
+
+
+.pg2{
+    height: 100vh;
+    width: 100%;
+    display: flex;
+}
+.pg2-left{
+    height: 100vh;
+    width: 40%;
+    background-image: url(https://images.unsplash.com/photo-1583873743670-6d60e445a7e2?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTd8fHlvZ2ElMjBwb3Nlc3xlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&w=500&q=60);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: flex;
+    align-items: end;
+    justify-content: center;
+    padding-bottom: 2vmax;
+}
+.quote{
+height: 10vh;
+width: 38vw;
+/* border: 2px solid white; */
+color: white;
+font-family: 'Dancing Script', cursive;
+font-size: 1.5vmax;
+text-align: center;
+}
+.quote> h1:hover{
+    color: yellow;
+}
+.pg2-right{
+    height: 100vh;
+    width: 60%;
+    background-color: black;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    color: white;
+    /* border-top: 2px solid white; */
+
+}
+.head{
+    height: 10vh;
+    width: 40vw;
+    /* border: 2px solid white; */
+}
+.head> h1{
+font-family: 'Dancing Script', cursive;
+    font-size: 4.5vmax;
+    text-align: center;
+    margin-top: -0.7vmax;
+    color:white;
+}
+.main{
+    height: 80vh;
+    width: 100%;
+    /* border: 2px solid black; */
+    display: flex;
+}
+.main-left{
+    height: 100%;
+    width: 50%;
+    /* background-color: red; */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.oval{
+    height: 60vh;
+    width: 20vw;
+    border: 3px solid white;
+    border-top-left-radius: 10vmax;
+    border-top-right-radius:10vmax ;
+    background-image: url(https://images.unsplash.com/photo-1578261260136-01d62b2d7d9e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1yZWxhdGVkfDZ8fHxlbnwwfHx8fHw%3D&auto=format&fit=crop&w=500&q=60);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    transition: all ease 1s;
+}
+.oval:hover{
+transform: scale(1.1);
+cursor: pointer;
+}
+.square{
+    height: 24vh;
+    width: 17vw;
+    border: 3px solid white;
+    transform: translateY(-3vmax);
+    background-image: url(https://images.unsplash.com/photo-1579126038374-6064e9370f0f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1yZWxhdGVkfDEwfHx8ZW58MHx8fHx8&auto=format&fit=crop&w=500&q=60);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.main-right{
+    height: 100%;
+    width: 50%;
+    /* background-color: blueviolet; */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+}
+.para1, .para2, .para3{
+    height: 17vh;
+width: 27vw;
+/* border: 2px solid white; */
+text-align: center;
+line-height: 1.4vmax;
+padding: 1vmax 1.2vmax;
+background-color:black;
+}
+.para1:hover, .para2:hover, .para3:hover{
+    /* background-color:rgb(104, 206, 148); */
+    border-top-left-radius: 3vmax;
+    border-bottom-right-radius: 3vmax;
+    cursor: pointer;
+}
+
+.para1, .para2, .para3> p{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1.1vmax;
+    color: white;
+
+}
+/* ----------------------------------------------------------- */
+
+.pg3{
+    height: 100vh;
+    width: 100%;
+    /* background: linear-gradient(white, rgb(211, 206, 206), rgb(170, 166, 166), rgb(174, 168, 168)); */
+    /* border-top: 2px solid black; */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+
+
+}
+.pg3-head{
+    height: 10vh;
+    width: 100%;
+    /* border: 2px solid black; */
+    font-family: 'Dancing Script', cursive;
+    font-size: 2.6vmax;
+    text-align: center;
+
+}
+.pg3-box{
+    height: 83vh;
+    width: 90vw;
+    /* border: 2px solid black; */
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.pg3-img{
+    height: 50vh;
+    width: 30vw;
+    /* border: 2px solid black; */
+}
+.pg3-box1{
+    height: 80vh;
+    width: 22vw;
+    /* border: 2px solid black; */
+display: flex;
+flex-direction: column;
+align-items: center;
+justify-content: space-between;
+transform: translateX(3vmax);
+padding: 0.4vmax 1vmax;
+}
+.pg3-box1-top{
+    height: 38vh;
+    width: 100%;
+    /* border: 2px solid black; */
+    padding: 0.2vmax 0.2vmax;
+    background-image: url(https://images.unsplash.com/photo-1599447332712-112c3d0cefb4?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1yZWxhdGVkfDJ8fHxlbnwwfHx8fHw%3D&auto=format&fit=crop&w=500&q=60);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: flex;
+    align-items: end;
+    border-top-right-radius: 5vmax;
+   
+}
+
+.pg3-box1-bottom{
+    height: 38vh;
+    width: 100%;
+    /* border: 2px solid black; */
+    padding: 0.2vmax 0.2vmax;
+    background-image: url(https://images.unsplash.com/photo-1599447292325-2cffaa79bcbb?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1yZWxhdGVkfDF8fHxlbnwwfHx8fHw%3D&auto=format&fit=crop&w=500&q=60);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: flex;
+    align-items: end;
+    border-bottom-left-radius: 5vmax;
+
+}
+
+.content{
+    height: 17vh;
+    width: 18vw;
+    margin: 1vmax auto;
+    /* border: 2px solid blue; */
+    color:white;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1vmax;
+    padding: 2.5vmax 0.3vmax;
+    text-align: center;
+}
+ .content >p{
+    /* backdrop-filter: blur(100vmax); */
+}
+.pg3-box2{
+    height: 80vh;
+    width: 22vw;
+    /* border: 2px solid black; */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+transform: translateX(-3vmax);
+padding: 0.4vmax 1vmax;
+
+
+}
+.pg3-box2-top{
+    height: 38vh;
+    width: 100%;
+    /* border: 2px solid black; */
+    padding: 0.2vmax 0.2vmax;
+    background-image: url(https://images.unsplash.com/photo-1599447292440-c110dfece71a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1yZWxhdGVkfDEyfHx8ZW58MHx8fHx8&auto=format&fit=crop&w=500&q=60);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: flex;
+    align-items: end;
+    border-top-left-radius: 5vmax;
+
+   
+}
+.pg3-box2-bottom{
+    height: 38vh;
+    width: 100%;
+    /* border: 2px solid black; */
+    padding: 0.2vmax 0.2vmax;
+    background-image: url(https://images.unsplash.com/photo-1599447333424-272c8fa5466f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1yZWxhdGVkfDExfHx8ZW58MHx8fHx8&auto=format&fit=crop&w=500&q=60);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: flex;
+    align-items: end;
+    border-bottom-right-radius: 5vmax;
+
+   
+}
+/* ---------------------------------------------------------- */
+
+.pg4{
+    height: 100vh;
+    width: 100%;
+    display: flex;
+}
+
+.pg4-right{
+    height: 100vh;
+    width: 50%;
+    background-color:black;
+}
+.square1{
+    height: 33vh;
+    width: 30vw;
+    border: 3px solid white;
+    position: absolute;
+    z-index: 99;
+    transform: translate(4vmax, 1vmax);
+    overflow: hidden;
+    
+}
+.img1{
+height: 100%;
+width: 100%;
+object-fit: cover;
+transition: all ease 1s;
+}
+
+.img1:hover{
+    transform: scale(1.2);
+}
+.square2{
+    height: 31vh;
+    width: 27vw;
+    /* background-color: pink; */
+    background: linear-gradient(white, rgb(211, 206, 206), rgb(170, 166, 166), rgb(174, 168, 168));
+
+    transform: translate(21vmax, 8vmax);
+}
+.square3{
+    height: 42vh;
+    width: 15vw;
+    border: 3px solid white;
+    transform: translate(23vmax, -2vmax);
+    overflow: hidden;
+    position: absolute;
+    z-index: 999;
+}
+.img2{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    transition: all ease 1s;
+    }
+    .img2:hover{
+        transform: scale(1.2);
+    }
+.square4{
+    height: 30vh;
+    width: 19vw;
+    border: 3px solid white;
+    transform: translate(1vmax, 3vmax);
+overflow: hidden;
+}
+.img3{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    transition: all ease 1s;
+    }
+    .img3:hover{
+        transform: scale(1.2);
+    }
+.square5{
+    height: 28vh;
+    width: 23vw;
+    /* border: 2px solid white; */
+    transform: translate(1vmax, 4vmax);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.square5> h1{
+    font-family: Arial, Helvetica, sans-serif;
+    color: white;
+    font-size: 2vmax;
+}
+.square5> p{
+    font-family: Arial, Helvetica, sans-serif;
+    color: white;
+    font-size: 1.1vmax;
+    text-align: center;
+}
+.square6{
+    height: 25vh;
+    width: 16vw;
+    /* border: 2px solid white; */
+    transform: translate(27vmax, -8vmax);
+}
+.square6> p{
+    font-family: Arial, Helvetica, sans-serif;
+    color: white;
+    font-size: 1.1vmax;
+    text-align: center;
+    padding: 0.2vmax 1vmax;
+}
+.pg4-left{
+    height: 100vh;
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    background-color: black;
+    color: white;
+}
+.pg4-left-head{
+    height: 10vh;
+    width: 90%;
+    /* border: 2px solid black; */
+
+}
+.pg4-left-head>h1{
+font-size: 2.5vmax;
+text-align: center;
+font-family: Arial, Helvetica, sans-serif;
+}
+.yogasna{
+    height: 80vh;
+    width: 100%;
+    /* border: 2px solid black; */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+
+}
+.yogasna-top{
+    height: 35vh;
+    width: 100%;
+    /* border: 2px solid red; */
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+
+}
+.yogasna-bottom{
+    height: 35vh;
+    width: 100%;
+    /* border: 2px solid red; */
+display: flex;
+align-items: center;
+    justify-content: space-evenly;
+}
+.chakra{
+    height: 32vh;
+    width: 15vw;
+    /* border: 2px solid blue; */
+    text-align: center;
+    padding: 0 0.5vmax;
+}
+.chakra1-img{
+    height: 14vh;
+    width: 8vw;
+    /* border: 2px solid black; */
+    background-image: url("https://www.seema.com/wp-content/uploads/2021/12/Green-Heart-Chakra.jpg");
+    background-position: center;
+    background-size: cover;
+    margin: 1vmax auto;
+
+}
+.chakra2-img{
+    height: 14vh;
+    width: 8vw;
+    /* border: 2px solid black; */
+    background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTUFHBwoRq2-K3m3cFi9UWxaAcFtArFgYAmLw&usqp=CAU");
+    background-position: center;
+    background-size: cover;
+    margin: 1vmax auto;
+
+
+}
+.chakra3-img{
+    height: 14vh;
+    width: 8vw;
+    /* border: 2px solid black; */
+    background-image: url("https://www.chakra-anatomy.com/image-files/xroot-chakra.png.pagespeed.ic.o9tNBh3WQ4.png");
+    background-position: center;
+    background-size: cover;
+    margin: 1vmax auto;
+
+
+}
+.chakra4-img{
+    height: 14vh;
+    width: 8vw;
+    /* border: 2px solid black; */
+    background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTBi6JiLRU_nlNiMmMca3R9C6Ge7DTZS6gPMi0lDcE3NtvScWEcuWRklNB_1F9cyBIoBbw&usqp=CAU");
+    background-position: center;
+    background-size: cover;
+    margin: 1vmax auto;
+
+
+}
+.chakra5-img{
+    height: 14vh;
+    width: 8vw;
+    /* border: 2px solid black; */
+    background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRcW2yteyFxKQSxXHTNAz7UKEGlWUeM9HGUMdFJiyNgBoTMLJYv1pxuasqiAWFIR-IGEng&usqp=CAU");
+    background-position: center;
+    background-size: cover;
+    margin: 1vmax auto;
+
+
+}
+.chakra6-img{
+    height: 14vh;
+    width: 8vw;
+    /* border: 2px solid black; */
+    background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQOUWH15ZCs9Z-8zrLEGziY-iJfEhQzGCU_LgpMPmEYYUzQOhg3K-hJHQKYjAqarIAIw00&usqp=CAU");
+    background-position: center;
+    background-size: cover;
+    margin: 1vmax auto;
+
+
+}
+.chakra >h1{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1.5vmax;
+    margin-top: -0.5vmax;
+}
+.chakra >p{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 0.9vmax;
+    margin-top: 0.7vmax;
+    color: rgb(180, 174, 174);
+}
+
+/* ------------------------------------------------------------- */
+
+.pg5{
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    
+}
+.pg5-head{
+    height: 6vh;
+    width: 14vw;
+    border-bottom: 2px solid black;
+
+}
+.pg5-head >h2{
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+}
+.card{
+    height: 35vh;
+    width: 20vw;
+    border: 2px solid black;
+    border-radius: 2vmax;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0 1vmax;
+    justify-content: space-evenly;
+/* background-color:rgb(24, 164, 157); */
+    transition: all ease 1s;
+    
+}
+.card-img1, .card-img2, .card-img3, .card-img4{
+    height: 20vh;
+    width: 15vw;
+    border: 3px solid white;
+border-radius: 1vmax;
+transition: all ease 1s;
+
+
+}
+.card-img1{
+    background-image: url("https://media.istockphoto.com/id/1297043029/photo/woman-practising-yoga-at-home-lotus-position-on-fitness-mat-balance-and-harmony.jpg?s=612x612&w=0&k=20&c=ac40EBIqwHHifx2z5ZWBS6-xeb9BKzH07CJFos4MVE4=");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.card-img2{
+    background-image: url("https://media.istockphoto.com/id/1073461004/photo/pensive-office-worker-starting-his-weekend-with-yoga.jpg?s=612x612&w=0&k=20&c=uQrLJmRJXJFRMyRfgQ7IiaexgAo9pKBBUZoldv9BOQo=");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.card-img3{
+    background-image: url("https://media.istockphoto.com/id/1277601725/photo/total-body-strenth-training.jpg?s=612x612&w=0&k=20&c=Z15ePqwb-bfG3E6Zbgo5u3_t1Do_TtxZ4LP3tXVG7PI=");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.card-img4{
+    background-image: url("https://media.istockphoto.com/id/1158752653/photo/male-yoga-relaxation-sporty-and-slim-handsome-young-man-is-doing-yoga-exercises-in-city-park.jpg?s=612x612&w=0&k=20&c=Y7grxDlsgHWSNaaJOhrQuol74J8gJIM6Etdwf-FRl3Q=");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+
+}
+.contents{
+    height: 10vh;
+    width: 100%;
+    border: 2px solid black;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+border-radius: 1vmax;
+color: white;
+
+}
+.content-name{
+    height: 8vh;
+    width: 13vw;
+    /* border: 2px solid white; */
+   
+}
+.content-name >h2{
+    font-size: 1.4vmax;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+    color:black;
+    padding: 0.3vmax 0;
+}
+.content-name >h6{
+    font-size: 1vmax;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+    color: black;
+}
+.card:hover .content-name >h2{
+    color: white;
+}
+.card:hover .content-name >h6{
+    color: white;
+}
+
+.card:hover{
+    height: 63vh;
+    cursor: pointer;
+}
+ .card:hover .card-img1{
+    transform:translateY(-5vmax);
+    border-radius: 50vmax;
+}
+.card:hover .card-img2{
+    transform:translateY(-5vmax);
+    border-radius: 50vmax;
+
+   
+}
+.card:hover .card-img3{
+    transform:translateY(-5vmax);
+    border-radius: 50vmax;
+   
+}
+.card:hover .card-img4{
+    transform:translateY(-5vmax);
+    border-radius: 50vmax;
+   
+}
+.card:hover .cardpara{
+    display: initial;
+    cursor: pointer;
+    color: white;
+
+}
+.card:hover .contents{
+height: 40vh;
+background-color: black;
+cursor: pointer;
+
+}
+
+.cardpara{
+    height: 25vh;
+    width: 100%;
+    /* border: 2px solid yellow; */
+    display: none;
+    
+}
+.cardpara >p{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1.2vmax;
+    margin-top: 1vmax;
+    color: white;
+    text-align: center;
+    padding: 0 1vmax;
+}
+.Read{
+    text-decoration: none;
+    background-color: black;
+    padding: 0.6vmax 1vmax;
+    border-radius: 1vmax;
+    color: white;
+    border: 2px solid white;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    font-size: 1.3vmax;
+    margin-top: 0.7vmax;
+    margin-left: 3.5vmax;
+}
+/* ----------------------------------------------------------------- */
+
+.pg6{
+    height: 110vh;
+    width: 100%;
+    background-image: url("https://media.istockphoto.com/id/1418275039/photo/horizon-lines.jpg?s=612x612&w=0&k=20&c=VIm9nYD_4gyxPCAJF2Fhh5lYVtNojhk8BEcS4C-S6wA=");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+
+/* filter: blur(2px); */
+}
+
+.overlay{
+    height: 100%;
+    width: 100%;
+    backdrop-filter: blur(4px);
+    display: flex;
+align-items: center;
+justify-content: space-around;
+padding: 0 2vmax;
+}
+.pg6-head{
+    height: 25vh;
+    width: 30vw;
+    /* border: 2px solid black; */
+    text-align: center;
+    margin-left: -8vmax;
+}
+.pg6-head >h1{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 2vmax;
+
+}
+.pg6-head >h3{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1.6vmax;
+    color: white;
+    margin-top: 3vmax;
+}
+.form{
+    height: 75vh;
+    width: 33vw;
+    /* border: 2px solid white; */
+    border-radius: 2vmax;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color:black;
+
+
+}
+input{
+    padding: 0.7vmax 3vmax;
+    font-size: 1.3vmax;
+    text-align: center;
+    margin: 1vmax 0;
+    border-radius: 0.4vmax;
+    border: 2px solid black;
+}
+.submit:hover{
+background-color:tomato;
+cursor: pointer;
+}
+.submit:active{
+    background-color: rgb(105, 105, 225);
+cursor: pointer;
+    
+}
+footer{
+    height: 7vh;
+    width: 100%;
+     background-color:rgb(197, 191, 191);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 3vmax;
+}
+.copy{
+    height: 7vh;
+    width: 35vw;
+    /* border: 2px solid black; */
+
+}
+.copy >h3{
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+    padding: 0.5vmax 0;
+    font-size: 1.3vmax;
+
+}
+.icons{
+    height: 7vh;
+    width: 20vw;
+    /* border: 2px solid black; */
+    display: flex;
+    align-items: center;
+justify-content: center;
+}
+i{
+    font-size: 2vmax;
+    margin: 0  0.5vmax;
+}
+.i1:hover{
+    color: rgb(207, 25, 116);
+}
+.i2:hover{
+    color: blue;
+}
+.i3:hover{
+    color: green;
+}
+.i4:hover{
+    color: red;
+}
+.i5:hover{
+    color: rgb(25, 154, 197);
+}
+
+
+
+
